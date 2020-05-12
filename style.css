@@ -1,11 +1,13 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     background-image: url(img/bgc.jpg);
     background-position: center;
+
 }
 
 header {
@@ -16,7 +18,7 @@ header {
     background-size: cover;
     background-position: center;
     box-shadow: 0 0 15px black;
-    margin: 1vh auto .3vh auto;
+    margin: 5% auto 3% auto;
     position: relative;
 }
 
@@ -34,7 +36,37 @@ header p {
 
 main {
     width: 70%;
-    height: 78.7vh;
+
     margin: 0 auto;
     background-color: rgba(0, 0, 0, 0.7);
+
+    position: relative;
+    margin: auto;
+
+
+}
+
+div.rozpoznanepolska h2 {
+    width: 100%;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #ddd;
+
+}
+
+
+
+.chart-container {
+    position: relative;
+    margin: auto;
+
+
+}
+
+.chart-container2 {
+    position: relative;
+    margin: auto;
+
+
+
 }
