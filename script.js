@@ -161,7 +161,7 @@ setTimeout(() => {
     var myChart = new Chart(zgony, {
         type: 'line',
         data: {
-            labels: [day14.slice(0, 10), day13.slice(0, 10), day12.slice(0, 10), day11.slice(0, 10), day10.slice(0, 10), day9.slice(0, 10), day8.slice(0, 10), day7.slice(0, 10), day6.slice(0, 10), day5.slice(0, 10), day4.slice(0, 10), day3.slice(0, 10), day2.slice(0, 10), day1.slice(0, 10)],
+            labels: [day14.slice(5, 10), day13.slice(5, 10), day12.slice(5, 10), day11.slice(5, 10), day10.slice(5, 10), day9.slice(5, 10), day8.slice(5, 10), day7.slice(5, 10), day6.slice(5, 10), day5.slice(5, 10), day4.slice(5, 10), day3.slice(5, 10), day2.slice(5, 10), day1.slice(5, 10)],
             datasets: [{
                 label: '',
                 data: [data14Deaths, data13Deaths, data12Deaths, data11Deaths, data10Deaths, data9Deaths, data8Deaths, data7Deaths, data6Deaths, data5Deaths, data4Deaths, data3Deaths, data2Deaths, data1Deaths],
@@ -209,7 +209,7 @@ setTimeout(() => {
             },
             title: {
                 display: true,
-                text: "Liczba zgonów zakażonych na koronowirusa z ostatnich 14 dni w Polsce",
+                text: "Liczba zgonów zakażonych na Covid-19 z ostatnich 14 dni w Polsce",
                 fontColor: '#f3ffbd',
                 fontSize: '12'
             },
