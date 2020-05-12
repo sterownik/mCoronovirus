@@ -4,6 +4,28 @@
     box-sizing: border-box;
 }
 
+p.titletime {
+    float: left;
+    display: block;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+}
+
+p.time {
+    display: block;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+div.clearfix {
+    display: block;
+    content: "";
+    clear: both;
+}
+
 body {
     background-image: url(img/bgc.jpg);
     background-position: center;
@@ -18,7 +40,7 @@ header {
     background-size: cover;
     background-position: center;
     box-shadow: 0 0 15px black;
-    margin: 5% auto 3% auto;
+    margin: 1% auto 3% auto;
     position: relative;
 }
 
@@ -43,6 +65,28 @@ main {
     position: relative;
     margin: auto;
 
+
+}
+
+div.poland {
+    margin: 0 auto;
+    width: 90%;
+    height: 50vh;
+    background-image: url(img/poland.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+
+}
+
+div.world {
+    margin: 0 auto;
+    width: 90%;
+    height: 50vh;
+    background-image: url(img/world.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
 
 }
 

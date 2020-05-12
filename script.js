@@ -1,6 +1,7 @@
 const api_url = 'https://api.covid19api.com/dayone/country/poland';
 
 const api_url2 = 'https://api.covid19api.com/summary';
+var time = document.querySelector("p.time");
 
 var dayPoland;
 var newDeathsPoland;
@@ -183,6 +184,7 @@ async function getDataDay() {
             dayPoland = data.Countries[i].Date.slice(0, 10);
 
             timePoland = data.Countries[i].Date.slice(11, 16);
+            time.textContent = dayPoland + ", " + timePoland;
 
 
 
@@ -336,4 +338,8 @@ setTimeout(() => {
         }
     });
 
+}, 2000);
+
+setTimeout(() => {
+    getDataDay();
 }, 2000);
