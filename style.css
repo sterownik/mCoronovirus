@@ -36,7 +36,7 @@ header p {
 
 main {
     width: 90%;
-
+    box-shadow: 0 0 15px #5bc0be;
     margin: 0 auto;
     background-color: rgba(0, 0, 0, 0.7);
 
