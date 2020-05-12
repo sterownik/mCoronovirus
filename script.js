@@ -1,4 +1,24 @@
 const api_url = 'https://api.covid19api.com/dayone/country/poland';
+
+const api_url2 = 'https://api.covid19api.com/summary';
+
+var dayPoland;
+var newDeathsPoland;
+var newConfirmedPoland;
+var totalConfirmedPoland;
+var totalDeathsPoland;
+var newRecoveredPoland;
+var totalRecoveredPoland;
+var timePoland;
+
+var worldNewConfirmed;
+var worldTotalConfirmed;
+var worldNewDeaths;
+var worldTotalDeaths;
+var worldNewRecovered;
+var worldTotalRecovered;
+
+
 var day1;
 var data1Confirmed;
 
@@ -40,6 +60,22 @@ var data11Deaths;
 var data12Deaths;
 var data13Deaths;
 var data14Deaths;
+
+var data1Recovered;
+var data2Recovered;
+var data3Recovered;
+var data4Recovered;
+var data5Recovered;
+var data6Recovered;
+var data7Recovered;
+var data8Recovered;
+var data9Recovered;
+var data10Recovered;
+var data11Recovered;
+var data12Recovered;
+var data13Recovered;
+var data14Recovered;
+
 
 async function getData() {
     const response = await fetch(api_url);
@@ -90,8 +126,75 @@ async function getData() {
     data14Deaths = data[data.length - 14].Deaths;
 
 
+    data1Recovered = data[data.length - 1].Recovered;
+    data2Recovered = data[data.length - 2].Recovered;
+    data3Recovered = data[data.length - 3].Recovered;
+    data4Recovered = data[data.length - 4].Recovered;
+    data5Recovered = data[data.length - 5].Recovered;
+    data6Recovered = data[data.length - 6].Recovered;
+    data7Recovered = data[data.length - 7].Recovered;
+    data8Recovered = data[data.length - 8].Recovered;
+    data9Recovered = data[data.length - 9].Recovered;
+    data10Recovered = data[data.length - 10].Recovered;
+    data11Recovered = data[data.length - 11].Recovered;
+    data12Recovered = data[data.length - 12].Recovered;
+    data13Recovered = data[data.length - 13].Recovered;
+    data14Recovered = data[data.length - 14].Recovered;
+
+    // console.log(data3Recovered);
+
+
+
 }
 getData();
+async function getDataDay() {
+    const response = await fetch(api_url2);
+    const data = await response.json();
+    worldNewConfirmed = data.Global.NewConfirmed;
+    worldTotalConfirmed = data.Global.TotalConfirmed;
+    worldNewDeaths = data.Global.NewDeaths;
+    worldTotalDeaths = data.Global.TotalDeaths;
+    worldNewRecovered = data.Global.NewRecovered;
+    worldTotalRecovered = data.Global.TotalRecovered;
+
+
+
+
+
+
+
+
+
+    for (i = 0; i <= data.Countries.length; i++) {
+        if (data.Countries[i].Country == "Poland") {
+
+            newConfirmedPoland = data.Countries[i].NewConfirmed;
+
+            totalConfirmedPoland = data.Countries[i].TotalConfirmed;
+
+            newDeathsPoland = data.Countries[i].NewDeaths;
+
+            totalDeathsPoland = data.Countries[i].TotalDeaths;
+
+            newRecoveredPoland = data.Countries[i].NewRecovered;
+
+            totalRecoveredPoland = data.Countries[i].TotalRecovered;
+
+            dayPoland = data.Countries[i].Date.slice(0, 10);
+
+            timePoland = data.Countries[i].Date.slice(11, 16);
+
+
+
+
+
+            // console.log(timePoland);
+
+        }
+    }
+
+}
+// getDataDay();
 
 setTimeout(() => {
     var zachorowania = document.getElementById('myChart').getContext('2d');
