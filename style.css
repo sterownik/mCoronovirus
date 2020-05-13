@@ -71,7 +71,7 @@ main {
 
 div.poland {
     margin: 0 auto;
-    width: 90%;
+    width: 98%;
     height: 50vh;
     background-image: url(img/poland.png);
     background-size: contain;
@@ -86,7 +86,7 @@ div.poland {
 
 div.world {
     margin: 0 auto;
-    width: 90%;
+    width: 98%;
     height: 50vh;
     background-image: url(img/world.png);
     background-size: contain;
