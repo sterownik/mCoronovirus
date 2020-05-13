@@ -2,6 +2,24 @@ const api_url = 'https://api.covid19api.com/dayone/country/poland';
 
 const api_url2 = 'https://api.covid19api.com/summary';
 var time = document.querySelector("p.time");
+var polandtotalconfirmed = document.querySelector("p.totalconfirmed");
+var polandtodayconfirmed = document.querySelector("p.todayconfirmed");
+
+var polandtotaldeaths = document.querySelector("p.totaldeaths");
+var polandtodaydeaths = document.querySelector("p.todaydeaths");
+
+var polandtotalrecover = document.querySelector("p.totalrecover");
+var polandtodayrecover = document.querySelector("p.todayrecover");
+
+
+var Worldtotalconfirmed = document.querySelector("p.totalconfirmedWorld");
+var Worldtodayconfirmed = document.querySelector("p.todayconfirmedWorld");
+
+var Worldtotaldeaths = document.querySelector("p.totaldeathsWorld");
+var Worldtodaydeaths = document.querySelector("p.todaydeathsWorld");
+
+var Worldtotalrecover = document.querySelector("p.totalrecoverWorld");
+var Worldtodayrecover = document.querySelector("p.todayrecoverWorld");
 
 var dayPoland;
 var newDeathsPoland;
@@ -158,6 +176,15 @@ async function getDataDay() {
     worldNewRecovered = data.Global.NewRecovered;
     worldTotalRecovered = data.Global.TotalRecovered;
 
+    Worldtotalconfirmed.textContent = worldTotalConfirmed;
+    Worldtodayconfirmed.textContent = worldNewConfirmed;
+
+    Worldtotaldeaths.textContent = worldTotalDeaths;
+    Worldtodaydeaths.textContent = worldNewDeaths;
+
+    Worldtotalrecover.textContent = worldTotalRecovered;
+    Worldtodayrecover.textContent = worldNewRecovered;
+
 
 
 
@@ -185,6 +212,15 @@ async function getDataDay() {
 
             timePoland = data.Countries[i].Date.slice(11, 16);
             time.textContent = dayPoland + ", " + timePoland;
+
+            polandtotalconfirmed.textContent = totalConfirmedPoland;
+            polandtodayconfirmed.textContent = newConfirmedPoland;
+
+            polandtotaldeaths.textContent = totalDeathsPoland;
+            polandtodaydeaths.textContent = newDeathsPoland;
+
+            polandtotalrecover.textContent = totalRecoveredPoland;
+            polandtodayrecover.textContent = newRecoveredPoland;
 
 
 

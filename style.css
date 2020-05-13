@@ -58,12 +58,13 @@ header p {
 
 main {
     width: 90%;
-    box-shadow: 0 0 15px #5bc0be;
+
     margin: 0 auto;
     background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 15px #5bc0be;
 
     position: relative;
-    margin: auto;
+    padding: 40px;
 
 
 }
@@ -76,6 +77,10 @@ div.poland {
     background-size: contain;
     background-repeat: no-repeat;
     background-position-x: center;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 15px #5bc0be;
+    padding: 40px auto;
 
 }
 
@@ -87,6 +92,9 @@ div.world {
     background-size: contain;
     background-repeat: no-repeat;
     background-position-x: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 15px #5bc0be;
+    margin: 40px auto;
 
 }
 
@@ -123,4 +131,55 @@ footer {
     color: white;
     line-height: 50px;
     text-align: center;
+}
+
+h1.title {
+    text-align: center;
+    font-size: 56px;
+    letter-spacing: 6px;
+}
+
+.poland h1.title {
+    color: #E5E5E5;
+    text-shadow: 6px 6px black;
+    padding: 20px;
+}
+
+.world h1.title {
+    color: #c3c3c3;
+    text-shadow: 6px 6px black;
+    padding: 20px;
+
+}
+
+.poland div,
+.world div {
+    width: 49%;
+    float: left;
+    height: 32%;
+}
+
+.poland div p,
+.world div p {
+    display: block;
+    float: left;
+    width: 48%;
+    height: 100%;
+    text-align: center;
+    font-size: 32px;
+    color: #FCA311;
+}
+
+.poland div p.title,
+.world div p.title {
+    font-size: 30px;
+    color: #aed9e0;
+    text-align: justify;
+    padding-left: 25px;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
 }
