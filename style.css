@@ -184,6 +184,22 @@ h1.title {
     display: table;
 }
 
+@media (max-height:626px) {
+    div.poland {
+
+        height: 65vh;
+
+
+    }
+
+    div.world {
+
+        height: 65vh;
+
+
+    }
+}
+
 @media (max-width:870px) {
 
     .poland div,
@@ -212,7 +228,45 @@ h1.title {
     }
 }
 
-@media (max-width:361px) {
+@media (max-width:415px) {
+    header p {
+
+        font-size: 32px;
+
+    }
+
+    .poland div,
+    .world div {
+
+        height: 27%;
+    }
+
+    .poland div p,
+    .world div p {
+        display: block;
+        float: left;
+        width: 48%;
+        height: 80%;
+        text-align: right;
+        font-size: 16px;
+        color: #FCA311;
+    }
+
+    .poland div p.title,
+    .world div p.title {
+        font-size: 13px;
+        color: #aed9e0;
+        text-align: justify;
+        padding-left: 4px;
+    }
+}
+
+@media (max-width:376px) {
+    header p {
+
+        font-size: 40px;
+
+    }
 
     .poland div,
     .world div {
@@ -237,5 +291,88 @@ h1.title {
         color: #aed9e0;
         text-align: justify;
         padding-left: 6px;
+    }
+}
+
+
+
+@media (max-width:361px) {
+    header p {
+
+        font-size: 40px;
+
+    }
+
+    .poland div,
+    .world div {
+
+        height: 27%;
+    }
+
+    .poland div p,
+    .world div p {
+        display: block;
+        float: left;
+        width: 48%;
+        height: 80%;
+        text-align: right;
+        font-size: 12px;
+        color: #FCA311;
+    }
+
+    .poland div p.title,
+    .world div p.title {
+        font-size: 11px;
+        color: #aed9e0;
+        text-align: justify;
+        padding-left: 6px;
+    }
+}
+
+@media (max-width:321px) {
+    header p {
+
+        font-size: 28px;
+
+    }
+
+    .poland div,
+    .world div {
+
+        height: 29%;
+    }
+
+    .poland div p,
+    .world div p {
+        display: block;
+        float: left;
+        width: 48%;
+        height: 80%;
+        text-align: right;
+        font-size: 9px;
+        color: #FCA311;
+    }
+
+    .poland div p.title,
+    .world div p.title {
+        font-size: 8px;
+        color: #aed9e0;
+        text-align: justify;
+        padding-left: 6px;
+    }
+
+    .poland h1.title {
+        font-size: 18px;
+        color: #5bc0be;
+        text-shadow: 6px 6px black;
+        padding: 20px;
+    }
+
+    .world h1.title {
+        color: #5bc0be;
+        font-size: 18px;
+        text-shadow: 6px 6px black;
+        padding: 20px;
+
     }
 }
