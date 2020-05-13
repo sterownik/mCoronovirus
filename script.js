@@ -273,7 +273,7 @@ setTimeout(() => {
                 display: true,
                 text: "Liczba zakażeń z 6 poprzednich dni w Polsce",
                 fontColor: '#6fffe9',
-                fontSize: '12'
+                fontSize: '21'
             },
             scales: {
                 yAxes: [{
@@ -352,7 +352,7 @@ setTimeout(() => {
                 display: true,
                 text: "Liczba zgonów zakażonych na Covid-19 z ostatnich 14 dni w Polsce",
                 fontColor: '#f3ffbd',
-                fontSize: '12'
+                fontSize: '21'
             },
             scales: {
                 yAxes: [{
@@ -370,6 +370,83 @@ setTimeout(() => {
                     }
                 }]
             },
+
+        }
+    });
+    var zdrowienia = document.getElementById('myChart3').getContext('2d');
+    var myChart = new Chart(zdrowienia, {
+        type: 'line',
+        data: {
+            labels: [day14.slice(5, 10), day13.slice(5, 10), day12.slice(5, 10), day11.slice(5, 10), day10.slice(5, 10), day9.slice(5, 10), day8.slice(5, 10), day7.slice(5, 10), day6.slice(5, 10), day5.slice(5, 10), day4.slice(5, 10), day3.slice(5, 10), day2.slice(5, 10), day1.slice(5, 10)],
+            datasets: [{
+                label: '',
+                data: [data14Recovered, data13Recovered, data12Recovered, data11Recovered, data10Recovered, data9Recovered, data8Recovered, data7Recovered, data6Recovered, data5Recovered, data4Recovered, data3Recovered, data2Recovered, data1Recovered],
+                backgroundColor: [
+                    'rgba(0,119,182,0.5)',
+                    'rgba(54, 162, 235, 0.5)',
+                    'rgba(255, 206, 86, 0.5)',
+                    'rgba(75, 192, 192, 0.5)',
+                    'rgba(153, 102, 255, 0.5)',
+                    'rgba(255, 159, 64, 0.5)',
+                    'rgba(255, 99, 132, 0.5)',
+                    'rgba(54, 162, 235, 0.5)',
+                    'rgba(255, 206, 86, 0.5)',
+                    'rgba(75, 192, 192, 0.5)',
+                    'rgba(153, 102, 255, 0.5)',
+                    'rgba(255, 159, 64, 0.5)',
+                    'rgba(153, 102, 255, 0.5)',
+                    'rgba(255, 159, 64, 0.5)'
+                ],
+                borderColor: [
+                    'rgba(1, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)',
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+
+            responsive: true,
+            maintainAspectRatio: false,
+            legend: {
+                display: false,
+                fontColor: 'black',
+            },
+            title: {
+                display: true,
+                text: "Liczba wyzdrowień z Covid-19 z ostatnich 14 dni w Polsce",
+                fontColor: '#f4a261',
+                fontSize: '21'
+            },
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        fontColor: '#0077b6',
+                        beginAtZero: true,
+
+                    }
+                }],
+                xAxes: [{
+                    ticks: {
+                        fontColor: '#0077b6',
+
+
+                    }
+                }]
+            },
+            backgroundColor: 'rgb(10,10,10)'
 
         }
     });
