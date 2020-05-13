@@ -64,7 +64,7 @@ main {
     box-shadow: 0 0 15px #5bc0be;
 
     position: relative;
-    padding: 40px 28px;
+    padding: 40px;
 
 
 }
@@ -79,7 +79,7 @@ div.poland {
     background-position-x: center;
     overflow: hidden;
     background-color: rgba(0, 0, 0, 0.7);
-    box-shadow: 0 0 12px #5bc0be;
+    box-shadow: 0 0 15px #5bc0be;
     padding: 40px auto;
 
 }
@@ -201,6 +201,12 @@ h1.title {
 }
 
 @media (max-width:870px) {
+    main {
+
+        padding: 20px;
+
+
+    }
 
     .poland div,
     .world div {
