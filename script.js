@@ -296,7 +296,7 @@ setTimeout(() => {
     });
 
 
-}, 2000);
+}, 2500);
 setTimeout(() => {
     var zgony = document.getElementById('myChart2').getContext('2d');
     var myChart = new Chart(zgony, {
@@ -374,8 +374,8 @@ setTimeout(() => {
         }
     });
 
-}, 2000);
+}, 2500);
 
 setTimeout(() => {
     getDataDay();
-}, 2000);
+}, 2500);
